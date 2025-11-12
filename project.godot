@@ -1,0 +1,40 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="sun_spotter"
+run/main_scene="uid://q32y58q47pl"
+config/features=PackedStringArray("4.5", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+PlayerManager="*res://00_Global/player_manager.gd"
+EntityManager="*res://00_Global/entity_manager.gd"
+ScoreManager="*res://00_Global/score_manager.gd"
+
+[display]
+
+window/size/viewport_width=320
+window/size/viewport_height=180
+window/size/window_width_override=1920
+window/size/window_height_override=1080
+window/stretch/mode="viewport"
+
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_9="Sun"
+2d_physics/layer_10="Blockers"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

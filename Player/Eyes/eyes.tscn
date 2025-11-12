@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://bk2l75me1xel2"]
+
+[ext_resource type="Script" uid="uid://dfiq62yxsme8" path="res://Player/Eyes/Scripts/eyes.gd" id="1_78eug"]
+[ext_resource type="Texture2D" uid="uid://bibsvermmavo5" path="res://Player/Eyes/Sprites/pixil-frame-0.png" id="1_hypvi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_78eug"]
+
+[node name="Eyes" type="Area2D"]
+collision_mask = 768
+monitorable = false
+script = ExtResource("1_78eug")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_hypvi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_78eug")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+amount = 4
+lifetime = 0.25
+speed_scale = 0.53
+emission_shape = 1
+emission_sphere_radius = 12.64
+spread = 58.39
+angular_velocity_min = 113.06
+angular_velocity_max = 113.06
+radial_accel_max = 9.92
+angle_min = -95.2
+angle_max = 113.1
+scale_amount_min = 3.0
+scale_amount_max = 6.0
+color = Color(0.24705882, 0.77254903, 0.7411765, 1)

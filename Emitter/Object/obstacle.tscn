@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbm1ik2jrrddv"]
+
+[ext_resource type="Script" uid="uid://cxg0efsjykv6d" path="res://Emitter/Object/obstacle.gd" id="1_shuto"]
+[ext_resource type="Texture2D" uid="uid://d2u3qgkmlyhtp" path="res://Emitter/Object/Sprites/pixil-frame-0.png" id="2_souuy"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_be68h"]
+radius = 15.0
+
+[node name="Object" type="Area2D"]
+collision_layer = 512
+collision_mask = 0
+monitoring = false
+script = ExtResource("1_shuto")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -7)
+texture = ExtResource("2_souuy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3)
+shape = SubResource("CapsuleShape2D_be68h")

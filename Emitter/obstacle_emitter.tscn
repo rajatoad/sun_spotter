@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnn6n55g2yori"]
+
+[ext_resource type="Script" uid="uid://b231uirvuxxi7" path="res://Emitter/Scripts/obstacle_emitter.gd" id="1_76wsl"]
+
+[node name="ObstacleEmitter" type="Node2D"]
+script = ExtResource("1_76wsl")

@@ -1,0 +1,1 @@
+class_name ShakeCamera2D extends Camera2D
