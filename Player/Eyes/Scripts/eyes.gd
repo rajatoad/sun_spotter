@@ -32,11 +32,11 @@ func _ready():
 func _process(_delta):
 	
 	if is_staring_at_sun and not is_blocked:
-		current_eye_limit += _delta * 10
+		current_eye_limit = clampf(current_eye_limit + (_delta * 10), 0, eye_limit_max)
 		self.global_position.x = lerpf(self.global_position.x, randf_range(self.global_position.x -10, self.global_position.x + 10), current_eye_limit/100)
 		self.global_position.y = lerpf(self.global_position.y, randf_range(self.global_position.y -10, self.global_position.y + 10), current_eye_limit/100)
 	else:
-		current_eye_limit -= _delta * 10
+		current_eye_limit = clampf(current_eye_limit - (_delta * 10), 0, eye_limit_max)
 
 	self.global_position.x = lerpf(self.global_position.x, get_global_mouse_position().x, 0.5)
 	self.global_position.y = lerpf(self.global_position.y, get_global_mouse_position().y, 0.5)
